@@ -1,0 +1,209 @@
+@media screen and (max-width: 767px) {
+  .sidebar-mobile {
+    display: none;
+  }
+  .slider__blok-title {
+    position: static;
+  }
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.sidebar > div {
+  margin-left: auto;
+  background-color: $color-slider-process;
+  height: 2px;
+  width: 7px;
+  z-index: 200;
+}
+.sidebar > div.is-activ {
+  width: 17px;
+  background-color: $color-background;
+}
+.sidebar > div + div {
+  margin-top: 12px;
+}
+
+.main-slide {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-btn {
+  border: none;
+  color: $color-text-06;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+  @include animation(color border-bottom);
+}
+
+.container .controls button:hover {
+  border-bottom: 1px solid $color-background;
+  color: $color-background;
+}
+
+.container .controls button {
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+  z-index: 100;
+  background-color: transparent;
+  border-bottom: 1px solid $color-text-06;
+  width: 60px;
+  color: $color-text-06;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  padding: 8px 0;
+  letter-spacing: 0.1em;
+}
+
+.container .controls .down-button {
+  transform: translateX(-87px);
+  text-align: left;
+}
+
+.container .controls .up-button {
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .slider__blok-title {
+    position: absolute;
+    width: 340px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slider__blok-title {
+    width: 400px;
+  }
+}
+
+.slide-01 {
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-1@1x-480.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-1@2x-1280.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-1@1x-1280.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-1@2x-1280.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-1@1x-1280.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-1@2x-1280.jpg');
+    }
+  }
+}
+.slide-02 {
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-2@1x-480.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-2@2x-1280.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-2@1x-1280.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-2@2x-1280.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-2@1x-1280.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-2@2x-1280.jpg');
+    }
+  }
+}
+.slide-03 {
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-3@1x-480.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-3@2x-1280.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-3@1x-1280.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-3@2x-1280.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+      url('.././images/slider-3@1x-1280.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($color-background-sidebar, $color-background-sidebar),
+        url('.././images/slider-3@2x-1280.jpg');
+    }
+  }
+}

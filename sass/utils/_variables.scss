@@ -1,0 +1,26 @@
+$color-background: #ffffff;
+$color-background-sidebar: rgba(25, 28, 38, 0.2);
+$color-text: #555555;
+$color-title: #303030;
+$color-acent: #ff6c00;
+$color-text-nav: #ffffff;
+$color-gradient-02: rgba(25, 28, 38, 0.2);
+$color-text-06: rgba(157, 164, 189, 0.6);
+$color-text-12: rgba(157, 164, 189, 0.12);
+$color-text-slider: #9da4bd;
+$color-background-price: #111319;
+$color-background-price-list: #171a24;
+$color-background-price-list-02: rgba(23, 26, 36, 0.2);
+$color-background-amt: #f7f7f7;
+$color-background-contact: #191c26;
+$color-border: rgba(157, 164, 189, 0.4);
+$color-slider-process: #9da4bd;
+
+$font-text: Open Sans, sans-serif;
+$font-title: Raleway, sans-serif;
+
+@mixin animation($property) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

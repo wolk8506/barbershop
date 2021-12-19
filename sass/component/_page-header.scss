@@ -1,0 +1,202 @@
+/* Header Navigation */
+.blok-header {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // ******************************
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 0;
+    width: 1170px;
+  }
+  @media screen and (min-width: 1280px) {
+    justify-content: space-between;
+  }
+  // ***********************
+  &__btn {
+    @media screen and (max-width: 767px) {
+      color: $color-title;
+      display: block;
+      margin-bottom: 64px;
+    }
+    background-color: transparent;
+    color: $color-background;
+  }
+}
+.navigation {
+  @media screen and (min-width: 768px) {
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-left: 49px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+  }
+  margin-right: auto;
+  &__list {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 64px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    @media screen and (max-width: 767px) {
+      color: $color-title;
+      font-size: 18px;
+      line-height: 1.39;
+    }
+    color: $color-background;
+    @include animation(color);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $color-acent;
+  }
+  @media screen and (max-width: 767px) {
+    &__item + &__item {
+      margin-top: 24px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__item + &__item {
+      margin-left: 24px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    &__item + &__item {
+      margin-left: 39px;
+    }
+  }
+  &__tel {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+      display: block;
+    }
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      bottom: -41px;
+      left: 21px;
+    }
+    @media screen and (min-width: 1280px) {
+      position: static;
+      margin-right: 40px;
+    }
+  }
+  &__contact {
+    @media screen and (min-width: 768px) {
+      position: relative;
+      margin-right: 41px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 8px;
+    }
+  }
+}
+.logo {
+  display: block;
+  margin-right: 70px;
+}
+// ********mobile menu****************************************
+@media screen and (min-width: 768px) {
+  .mobile-onvisible {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .on-visible {
+    display: none;
+  }
+}
+.mobile-menu {
+  @include animation(transform);
+  @media screen and (max-width: 767px) {
+    visibility: hidden;
+    @include animation(transform);
+    opacity: 0;
+    position: absolute;
+    padding-top: 118px;
+    padding-right: 31px;
+    padding-left: 40px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    z-index: 10;
+    background-color: $color-background;
+    &__link {
+      color: $color-title;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.36;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+    &__item:last-child {
+      margin-top: 24px;
+      margin-left: 100px;
+    }
+    &__item--decor::before {
+      content: '';
+      background-color: $color-title;
+      width: 60px;
+      height: 1px;
+      margin-right: 40px;
+    }
+    &__btn-close,
+    &__btn-open {
+      position: absolute;
+      top: 48px;
+      right: 50px;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      z-index: 20;
+    }
+    &__btn-open {
+      z-index: 5;
+
+      fill: $color-background;
+    }
+    &__logo {
+      position: absolute;
+      top: 40px;
+      left: 31px;
+
+      z-index: 20;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: contents;
+  }
+}
+.is-open {
+  transform: translateX(0);
+  visibility: inherit;
+  opacity: 1;
+  @include animation(transform);
+}

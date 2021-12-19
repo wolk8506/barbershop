@@ -1,0 +1,233 @@
+.contact {
+  padding: 0;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+  background-color: $color-background-contact;
+
+  &__blok-left {
+    @media screen and (max-width: 767px) {
+      padding: 84px 31px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 100px 39px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 655px;
+      padding: 131px 0 131px 55px;
+    }
+  }
+  &__blok-right {
+    @media screen and (max-width: 767px) {
+      padding: 84px 31px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 100px 39px;
+      display: flex;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 625px;
+      padding: 131px 55px 131px 100px;
+      display: block;
+    }
+
+    // ***********************************
+    @media screen and (max-width: 767px) {
+      background-image: url('../images/bg-3@1x-480.png');
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/bg-3@2x-480.png');
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      background-image: url('../images/bg-3@1x-768.png');
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/bg-3@2x-768.png');
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      background-image: url('../images/bg-3@1x-1280.png');
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/bg-3@2x-1280.png');
+      }
+    }
+
+    // ***********************************
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__blok-top {
+    @media screen and (min-width: 768px) {
+      width: 250px;
+      margin-right: 110px;
+    }
+    @media screen and (min-width: 1280px) {
+      min-width: 250px;
+      margin-right: 0;
+    }
+  }
+  &__blok-bottom {
+    @media screen and (min-width: 768px) {
+      padding-top: 89px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding-top: 0;
+    }
+  }
+  &__title {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    color: $color-background;
+    margin-bottom: 40px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+
+    font-size: 18px;
+    line-height: 1.67;
+
+    letter-spacing: 0.02em;
+    color: $color-text-slider;
+    @include animation(color fill);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $color-acent;
+    fill: $color-acent;
+  }
+  &__list li + li {
+    margin-top: 20px;
+  }
+  &__desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-background;
+  }
+  &__desc::before {
+    margin-right: 20px;
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: $color-border;
+  }
+  &__time {
+    color: $color-text-slider;
+  }
+  &__img {
+    margin-right: 16px;
+  }
+}
+address {
+  margin-bottom: 44px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 70px;
+    width: 252px;
+    margin-bottom: 44px;
+  }
+}
+.form {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__group {
+    position: relative;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 44px;
+    color: $color-background;
+    cursor: pointer;
+  }
+
+  &__label {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-border;
+    @include animation(transform);
+  }
+  &__input:focus-within + &__label {
+    color: $color-background;
+  }
+  &__input:hover,
+  &__input:focus {
+    border-bottom: 1px solid $color-background;
+  }
+  &__input:hover + &__label {
+    color: $color-background;
+  }
+  &__input:not(:placeholder-shown) + &__label,
+  &__input:focus + &__label {
+    transform: translateY(-150%);
+  }
+  &__name {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: 330px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 270px;
+    }
+    margin-right: 30px;
+  }
+  &__tel {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: 330px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 260px;
+    }
+  }
+  &__message {
+    height: 76px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: 690px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 560px;
+    }
+    resize: none;
+  }
+  &__btn {
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    color: $color-background;
+  }
+}

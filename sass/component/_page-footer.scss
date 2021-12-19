@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+  padding-top: 57px;
+  padding-bottom: 55px;
+  &__text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: $color-text-slider;
+    flex-shrink: 0;
+  }
+  &__list {
+    display: flex;
+    width: 100%;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  &__item + &__item {
+    margin-left: 40px;
+  }
+  &__item--decor::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+    background-color: $color-title;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: $color-title;
+    @include animation(color);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $color-acent;
+  }
+}
